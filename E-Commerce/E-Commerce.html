@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" /> 
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css" />
     <title>Multi Store</title>
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
-
   </head>
   <body>
+
     <!-- Navbar Start -->
     <nav class="navbar">
-      <a href="#" class="nav-logo"><i>multi<span style="color: rgb(247, 215, 100)">store</span>.</i></a>
-      <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact Us</a>
+
+      <div class="logo-container">
+        <img src="store.png" alt="logo" />
+        <i>multi<span style="color: rgb(234, 185, 100)">store</span>.</i>
       </div>
-      <div class="nav-extract">
-        <!-- id digunakan untuk java script nantinya -->
-        <a href="#" id="search"><i data-feather="search"></i></a>
-        <!--Untuk icon search di navbar(feathericons)-->
-        <a href="#" id="shopping-cart"><i data-feather="shopping-cart"></i></a>
-        <!--Untuk icon keranjang belanja di navbar(feathericons)-->
-        <a href="#" id="menu"><i data-feather="menu"></i></a>
-        <!--Untuk icon menu di navbar(feathericons)-->
+
+      <div class="search-container">
+        <div class="search-box">
+          <i data-feather="search"></i>
+          <span>Cari di Multistore</span>
+        </div>
+        <i data-feather="shopping-cart"></i>
       </div>
+
+      <div class="menu-container">
+        <i data-feather="menu"></i>
+      </div>
+
     </nav>
     <!-- Navbar End -->
 
@@ -47,24 +49,14 @@
       <div class="lp-pic-2"></div>
       <div class="lp-pic-3"></div>
       <div class="lp-pic-4"></div>
-      <ul style="position: absolute; right: 0; top: 80px; list-style-type: none; z-index: 8888;">
-        <li style="color: #fff; margin-bottom: 70px;"><i data-feather="more-horizontal" style="width: 50px; height: 50px;"></i></li>
-        <li style="color: #fff; margin-bottom: 70px;"><i data-feather="more-horizontal" style="width: 50px; height: 50px;"></i></li>
-        <li style="color: #fff;"><i data-feather="more-horizontal" style="width: 50px; height: 50px;"></i></li>
-      </ul>
     </div>
     <!-- Landing Page End -->
 
-    <div>
-      <h1 id="products" style="text-align: center; margin-top: 90px; background-color: #fff; max-width: 100%">Products</h1>
-    </div>
-
     <!-- Menu Products Start -->
-    <div class="grid-products">
-
-      <div class="grid-item">
+    <div class="products-container">
+      <div class="item">
         <img src="products/1.png" alt="product1" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Headphone</h3>
+        <h3>Headphone</h3>
         <p>Rp178.890</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -74,14 +66,14 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/2.png" alt="product2" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Tas Slempang</h3>
+        <h3>Tas Slempang</h3>
         <p>Rp59.999</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -91,116 +83,116 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/3.png" alt="product3" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Handphone</h3>
+        <h3>Handphone</h3>
         <p>Rp197.500</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/4.png" alt="product4" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Tisu Passeo</h3>
+        <h3>Tisu Passeo</h3>
         <p>Rp36.780</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/5.png" alt="product5" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Mouse PC</h3>
+        <h3>Mouse PC</h3>
         <p>Rp165.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/6.png" alt="product6" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Sari Roti</h3>
+        <h3>Sari Roti</h3>
         <p>Rp63.450</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/7.png" alt="product7" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Indomie</h3>
+        <h3>Indomie</h3>
         <p>Rp90.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/8.png" alt="product8" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Sepatu Wanita</h3>
+        <h3>Sepatu Wanita</h3>
         <p>Rp205.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/9.png" alt="product9" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Rak Sepatu</h3>
+        <h3>Rak Sepatu</h3>
         <p>Rp57.990</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -210,14 +202,14 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/10.png" alt="product10" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Gitar</h3>
+        <h3>Gitar</h3>
         <p>Rp150.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -227,31 +219,31 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/11.png" alt="product11" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Bedak</h3>
+        <h3>Bedak</h3>
         <p>Rp37.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/12.png" alt="product12" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Jas Hujan</h3>
+        <h3>Jas Hujan</h3>
         <p>Rp271.999</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -261,14 +253,14 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/13.png" alt="product13" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Teh Sariwangi</h3>
+        <h3>Teh Sariwangi</h3>
         <p>Rp10.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -278,14 +270,14 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/14.png" alt="product14" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Kaos Pria</h3>
+        <h3>Kaos Pria</h3>
         <p>Rp69.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -295,14 +287,14 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/15.png" alt="product15" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Sarung tangan jalan</h3>
+        <h3>Sarung tangan jalan</h3>
         <p>Rp15.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -312,14 +304,14 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/16.png" alt="product16" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Hoodie</h3>
+        <h3>Hoodie</h3>
         <p>Rp158.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -329,14 +321,14 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/17.png" alt="product17" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Mangkuk</h3>
+        <h3>Mangkuk</h3>
         <p>Rp13.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -346,65 +338,65 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/18.png" alt="product18" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Parfum</h3>
+        <h3>Parfum</h3>
         <p>Rp47.670</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/19.png" alt="product19" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Kosmetik</h3>
+        <h3>Kosmetik</h3>
         <p>Rp112.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/20.png" alt="product20" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Tas Kucing</h3>
+        <h3>Cat Bag</h3>
         <p>Rp148.890</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/21.png" alt="product21" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Snack Kucing</h3>
+        <h3>Excel Snack Kucing</h3>
         <p>Rp35.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -414,31 +406,31 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/22.png" alt="product22" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Kaos Remaja</h3>
+        <h3>Kaos Remaja</h3>
         <p>Rp69.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
-          <li style="display: inline"><i data-feather="star"></i></li>
+          <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/23.png" alt="product23" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Helm</h3>
+        <h3>Helm</h3>
         <p>Rp90.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -448,14 +440,14 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/24.png" alt="product24" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Masker</h3>
+        <h3>Masker</h3>
         <p>Rp17.780</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -465,14 +457,14 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
       </div>
 
-      <div class="grid-item">
+      <div class="item">
         <img src="products/25.png" alt="product25" />
-        <h3 style="font-weight: bold; font-size: 20px; padding: 5px">Spatula</h3>
+        <h3>Spatula</h3>
         <p>Rp18.980</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -482,12 +474,12 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
         <div class="bt-item">
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Tambah ke Troli</button>
-          <button style="padding: 10px; font-size: 10px; color: #000000; background-color: orange">Buy Now</button>
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
         </div>
-      </div> 
+      </div>
     </div>
-    <!-- Menu Products End --> 
+    <!-- Menu Products End -->
 
     <!-- Feather Icons -->
     <script>
@@ -495,4 +487,3 @@
     </script>
   </body>
 </html>
- 
