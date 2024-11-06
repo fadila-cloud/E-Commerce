@@ -3,60 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Multi Store</title>
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Custom css file link -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
 
     <!-- Navbar Start -->
-    <nav class="navbar">
+    <header>
 
-      <div class="logo-container">
-        <img src="store.png" alt="logo" />
-        <i>multi<span style="color: rgb(234, 185, 100)">store</span>.</i>
+      <a href="#" class="logo-header">multi<span style="color: #717171;">store</span>.</a>
+
+      <nav class="navbar-header">
+        <a href="#home">Home</a>
+        <a href="about">About</a>
+        <a href="#products">Products</a>
+        <a href="review">Review</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="icons-header">
+        <a href=""><i data-feather="search"></i></a>
+        <a href=""><i data-feather="shopping-cart"></i></a>
+        <a href=""><a href=""><i data-feather="menu"></i></a></a>
       </div>
 
-      <div class="search-container">
-        <div class="search-box">
-          <i data-feather="search"></i>
-          <span>Cari di Multistore</span>
-        </div>
-        <i data-feather="shopping-cart"></i>
-      </div>
-
-      <div class="menu-container">
-        <i data-feather="menu"></i>
-      </div>
-
-    </nav>
+    </header>
     <!-- Navbar End -->
 
-    <!-- Landing Page Start -->
-    <div class="lp">
-      <h1 style="top: 100px; font-size: 30px; margin-left: 30px; position: absolute; color: #fff">multi</h1>
-      <h1 style="top: 110px; font-size: 150px; margin-left: 30px; position: absolute; color: #fff">store<span style="color: #fff">.</span></h1>
-      <div class="lp-teks">
+    <!-- Home Starts -->
+    <div class="home" id="home">
+
+      <div class="content">
+        <h3>multi store.</h3>
         <p>MultiStore adalah toko online terpercaya dengan produk berkualitas</p>
         <p>dan harga terbaik untuk pengalaman belanja yang aman.</p>
       </div>
-      <div class="lp-pic">
-        <img src="store.png" alt="store" style="max-width: 500px; height: 500px" />
-      </div>
-      <div class="lp-pic-1"></div>
-      <div class="lp-pic-2"></div>
-      <div class="lp-pic-3"></div>
-      <div class="lp-pic-4"></div>
+
     </div>
-    <!-- Landing Page End -->
+    <!-- Home Ends -->
 
     <!-- Menu Products Start -->
     <div class="products-container">
+
       <div class="item">
         <img src="products/1.png" alt="product1" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Headphone</h3>
+        <h2>Headphone Bluetooth</h2>
         <p>Rp178.890</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -65,15 +66,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/2.png" alt="product2" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Tas Slempang</h3>
+        <h2>Tas Slempang Wanita</h2>
         <p>Rp59.999</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -82,16 +84,17 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/3.png" alt="product3" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Handphone</h3>
-        <p>Rp197.500</p>
+        <h2>Realmi C52 Ram 4GB/128GB</h2>
+        <p>Rp1.897.500</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -99,15 +102,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/4.png" alt="product4" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Tisu Passeo</h3>
+        <h2>Tisu Passeo Isi 6pcs</h2>
         <p>Rp36.780</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -116,15 +120,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/5.png" alt="product5" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Mouse PC</h3>
+        <h2>Mouse Wireless Gaming</h2>
         <p>Rp165.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -133,16 +138,17 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/6.png" alt="product6" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Sari Roti</h3>
-        <p>Rp63.450</p>
+        <h2>Sari Roti Tawar Jumbo</h2>
+        <p>Rp17.450</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -150,15 +156,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/7.png" alt="product7" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Indomie</h3>
+        <h2>Indomie Goreng 1 Dus 85grx40 pcs</h2>
         <p>Rp90.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -167,15 +174,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/8.png" alt="product8" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Sepatu Wanita</h3>
+        <h2>Sepatu Sneakers Wanita Kasual Sport</h2>
         <p>Rp205.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -184,15 +192,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/9.png" alt="product9" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Rak Sepatu</h3>
+        <h2>Rak Sepatu 4 Susun</h2>
         <p>Rp57.990</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -201,15 +210,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/10.png" alt="product10" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Gitar</h3>
+        <h2>Gitar Akustik | Gitar Jumbo Murah</h2>
         <p>Rp150.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -218,15 +228,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/11.png" alt="product11" />
-        <h3>Bedak</h3>
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
+        <h3>OMG</h3>
+        <h2>OMG Oh My Glam</h2>
         <p>Rp37.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -235,15 +246,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/12.png" alt="product12" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Jas Hujan</h3>
+        <h2>Jas Hujan Pria Wanita Tebal Kuat Elastis</h2>
         <p>Rp271.999</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -252,15 +264,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/13.png" alt="product13" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Teh Sariwangi</h3>
+        <h2>Sariwangi Teh Celup</h2>
         <p>Rp10.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -269,15 +282,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/14.png" alt="product14" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Kaos Pria</h3>
+        <h2>Kemeja Pria Lengan Pendek Katun</h2>
         <p>Rp69.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -286,15 +300,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/15.png" alt="product15" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Sarung tangan jalan</h3>
+        <h2>Sarung Tangan Wanita Rajut</h2>
         <p>Rp15.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -303,15 +318,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/16.png" alt="product16" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Hoodie</h3>
+        <h2>Sweater Hoodie Jaket Polos All Size</h2>
         <p>Rp158.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -320,15 +336,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/17.png" alt="product17" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Mangkuk</h3>
+        <h2>Mangkuk Mahoni 7cm</h2>
         <p>Rp13.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -337,15 +354,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/18.png" alt="product18" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Parfum</h3>
+        <h2>Sauvage Parfum 35ml</h2>
         <p>Rp47.670</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -354,15 +372,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/19.png" alt="product19" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Kosmetik</h3>
+        <h2>Paket Make Up Kecantikan Muka</h2>
         <p>Rp112.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -371,15 +390,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/20.png" alt="product20" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Cat Bag</h3>
+        <h2>Tas Astronot Kucing Original</h2>
         <p>Rp148.890</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -388,15 +408,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/21.png" alt="product21" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Excel Snack Kucing</h3>
+        <h2>Makanan Kucing Kering Excel Tuna</h2>
         <p>Rp35.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -405,15 +426,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/22.png" alt="product22" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Kaos Remaja</h3>
+        <h2>Kaos Pria Lengan Pendek</h2>
         <p>Rp69.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -422,15 +444,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/23.png" alt="product23" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Helm</h3>
+        <h2>Helm Honda Original standar Vario</h2>
         <p>Rp90.000</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -439,15 +462,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/24.png" alt="product24" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Masker</h3>
+        <h2>Masker Earlop Isi 50 PCS</h2>
         <p>Rp17.780</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -456,15 +480,16 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
 
       <div class="item">
         <img src="products/25.png" alt="product25" />
+        <div class="bt-item">
+          <button>Tambah ke Troli</button>
+          <button>Buy Now</button>
+        </div>
         <h3>Spatula</h3>
+        <h2>Spatula Kitchen Set 5in</h2>
         <p>Rp18.980</p>
         <ul>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
@@ -473,10 +498,6 @@
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
           <li style="display: inline"><i data-feather="star" class="star-icons"></i></li>
         </ul>
-        <div class="bt-item">
-          <button>Tambah ke Troli</button>
-          <button>Buy Now</button>
-        </div>
       </div>
     </div>
     <!-- Menu Products End -->
