@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #bd98a9;
+  background-color: rgb(211, 209, 209);
 }
 
 header {
@@ -57,7 +57,7 @@ header .icons-header a:hover {
   position: relative;
   max-width: 100%;
   height: 37rem;
-  background: url(download.jpg) no-repeat center;
+  background: url(home.jpg) no-repeat center;
   background-size: cover;
   background-position: center;
 }
@@ -65,7 +65,8 @@ header .icons-header a:hover {
 .home .content-home {
   position: absolute;
   top: 15rem;
-  margin-left: 35rem;
+  margin-left: 10rem;
+  text-align: center;
 }
 
 .home .content-home h3 {
@@ -76,19 +77,19 @@ header .icons-header a:hover {
 .home .content-home h3 span {
   font-size: 5rem;
   color: #565656;
-  margin-left: 0.3rem;
+  margin-left: 1rem;
 }
 
 .home .content-home p {
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #333;
-  line-height: 2.5rem;
+  line-height: 3rem;
 }
 
 .home .btn-home {
   display: inline-block;
   border-radius: 3rem;
-  background-color: #333;
+  background-color: rgb(112, 112, 112);
   color: #fff;
   padding: 0.7rem 0.7rem;
   font-size: 1rem;
@@ -96,7 +97,7 @@ header .icons-header a:hover {
 }
 
 .home .btn-home:hover {
-  background-color: rgb(255, 82, 111);
+  background-color: rgb(167, 167, 167);
   color: #000;
 }
 
@@ -110,9 +111,9 @@ header .icons-header a:hover {
   font-size: 2rem;
   color: #333;
   padding: 0.5rem;
-  margin-top: 1rem;
+  margin-top: 0.1rem;
   margin-bottom: 5rem;
-  background-color: #eecae1;
+  background-color: rgb(181, 181, 181);
 }
 
 .about h1 span {
@@ -141,7 +142,7 @@ header .icons-header a:hover {
   padding: 0.5rem;
   margin-top: 1rem;
   margin-bottom: 3rem;
-  background-color: #eecae1;
+  background-color: rgb(181, 181, 181);
 }
 
 .products-container .box-container {
@@ -157,29 +158,85 @@ header .icons-header a:hover {
 
 .products-container .box-container .item {
   max-width: 15rem;
-  max-height: 35rem;
+  max-height: 30rem;
   text-align: center;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  background-color: #fff;
-  box-shadow: 0.1rem 0.1rem 0.5rem #333;
+  background-color: rgb(236, 236, 236);
+  box-shadow: 0.3rem 0.3rem 0.3rem #333;
 }
 
 .products-container .box-container .item img {
   width: 15rem;
   height: 15rem;
   object-fit: cover;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-radius: 1rem;
 }
 
-.products-container .box-container .item .bt-item {
-  margin-top: 0;
-  margin-bottom: 0.1rem;
-  padding: 1rem 0;
-  font-size: 0.3rem;
-  color: #000000;
-  background-color: #eecae1;
+.products-container .box-container .item .troli .troli-icon {
+  width: 1rem;
+  padding-top: 0.5rem;
+  color: #333;
+}
+
+.products-container .box-container .item .troli button {
+  background-color: rgb(236, 236, 236);
+  padding-bottom: 0.5rem;
+  margin-left: 0.3rem;
+  color: #333;
+  font-size: 1rem;
+}
+
+.products-container .box-container .item h3 {
+  margin-left: 0.7rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.products-container .box-container .item span {
+  font-weight: normal;
+}
+
+.products-container .box-container .item .harga {
+  text-align: left;
+  color: red;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  margin-left: 0.7rem;
+} 
+
+.products-container .box-container .item .alamat {
+  margin-left: 0.7rem;
+  text-align: left;
+  display: flex;
+}
+
+.products-container .box-container .item .alamat .home-icon {
+  width: 1rem;
+  color: #333;
+}
+
+.products-container .box-container .item .alamat p {
+  margin-left: 0.3rem;
+  padding-top: 0.3rem;
+  color: #333;
+}
+
+.products-container .box-container .item .terjual {
+  display: flex;
+}
+
+.products-container .box-container .item .terjual .star-icon {
+  width: 1rem;
+  margin-left: 0.7rem;
+}
+
+.products-container .box-container .item .terjual p {
+  margin-left: 0.3rem;
+  padding-top: 0.3rem;
+  color: #333;
 }
 
 .products-container .box-container .item h3 {
@@ -194,27 +251,34 @@ header .icons-header a:hover {
   padding-bottom: 0.1rem;
 }
 
-.products-container .box-container .item .star-icons {
+.products-container .box-container .item .star-icon {
   fill: yellow;
+  stroke: #000;
   width: 1rem;
 }
 
-.products-container .box-container .item .star {
-  fill: #fff;
-  width: 1rem;
-}
-
-.products-container .box-container .item p {
-  text-align: left;
-  color: red;
-  font-weight: bold;
-  margin-left: 0.7rem;
-  margin-bottom: 0.7rem;
+.products-container .box-container .item .buy {
+  background-color: #6c6c6c;
+  padding: 0.5rem;
+  color: #fff;
+  border-radius: 0.7rem;
+  margin: 0.3rem 0.3rem;
+  text-align: center;
+  padding: 0.7rem;
 } 
 
-.products-container .box-container .item:hover {
-  box-shadow: 5px 5px 11px rgb(237, 118, 215);
+.products-container .box-container .item:hover{
+  box-shadow: 0.3rem 0.3rem 0.3rem rgb(107, 107, 107);
   transform: scale(0.9);
+  display: block;
+}
+
+.products-container .box-container .item .buy {
+  display: none;
+}
+
+.products-container .box-container .item:hover .buy{
+  display: block;
 }
 
 
@@ -230,12 +294,8 @@ header .icons-header a:hover {
   header {
     padding: 2rem;
   }
-
-  .item {
-    grid-template-columns: repeat(5,1fr);
-  }
-
 }
+
 
 /* Tablets */
 @media (max-width: 768px) {
@@ -255,11 +315,20 @@ header .icons-header a:hover {
     font-size: 1rem;
   }
 
-  .item {
-    grid-template-columns: repeat(3,fr);
+  .products-container .box-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
   }
 
+  .products-container .box-container .item img {
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
 }
+
 
 /* Handphones */
 @media (max-width: 450px) {
@@ -279,5 +348,18 @@ header .icons-header a:hover {
     color: #333;
     line-height: 2rem;
     padding: 1rem;
+  }
+
+  .products-container .box-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .products-container .box-container .item img {
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
   }
 }
