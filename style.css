@@ -21,7 +21,7 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 9999;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 header .logo-header {
@@ -112,7 +112,7 @@ header .icons-header a:hover {
   color: #333;
   padding: 0.5rem;
   margin-top: 0.1rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   background-color: rgb(181, 181, 181);
 }
 
@@ -132,10 +132,10 @@ header .icons-header a:hover {
   font-size: 1.3rem;
   color: #333;
   line-height: 2rem;
-  padding: 1rem 20rem;
+  padding: 3rem 15rem;
 }
 
-.products-container h1 {
+.products h1 {
   text-align: center;
   font-size: 2rem;
   color: #333;
@@ -145,18 +145,19 @@ header .icons-header a:hover {
   background-color: rgb(181, 181, 181);
 }
 
-.products-container .box-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto;
+.products .box-container {
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.7rem;
   margin: 0.5rem;
 }
 
-.products-container .box-container .item ul {
+.products .box-container .item ul {
   list-style-type: none;
 }
 
-.products-container .box-container .item {
+.products .box-container .item {
+  position: relative;
   max-width: 15rem;
   max-height: 30rem;
   text-align: center;
@@ -166,38 +167,52 @@ header .icons-header a:hover {
   box-shadow: 0.3rem 0.3rem 0.3rem #333;
 }
 
-.products-container .box-container .item img {
+.products .box-container .item .discount {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: red;
+}
+
+.products .box-container .item img {
   width: 15rem;
   height: 15rem;
   object-fit: cover;
   border-radius: 1rem;
 }
 
-.products-container .box-container .item .troli .troli-icon {
-  width: 1rem;
+.products .box-container .item .troli {
+  background-color: rgb(236, 236, 236);
+}
+
+.products .box-container .item .troli .troli-icon {
+  width: 1.7rem;
+  height: 1.7rem;
   padding-top: 0.5rem;
   color: #333;
 }
 
-.products-container .box-container .item .troli button {
-  background-color: rgb(236, 236, 236);
-  padding-bottom: 0.5rem;
-  margin-left: 0.3rem;
+.products .box-container .item .troli .troli-cart {
+  padding-bottom: 0.7rem;
+  margin-left: 0.1rem;
   color: #333;
   font-size: 1rem;
 }
 
-.products-container .box-container .item h3 {
+.products .box-container .item h3 {
   margin-left: 0.7rem;
   font-weight: bold;
   text-align: left;
 }
 
-.products-container .box-container .item span {
+.products .box-container .item span {
   font-weight: normal;
 }
 
-.products-container .box-container .item .harga {
+.products .box-container .item .harga {
   text-align: left;
   color: red;
   font-weight: bold;
@@ -205,59 +220,59 @@ header .icons-header a:hover {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
   margin-left: 0.7rem;
-} 
+}
 
-.products-container .box-container .item .alamat {
+.products .box-container .item .alamat {
   margin-left: 0.7rem;
   text-align: left;
   display: flex;
 }
 
-.products-container .box-container .item .alamat .home-icon {
+.products .box-container .item .alamat .home-icon {
   width: 1rem;
   color: #333;
 }
 
-.products-container .box-container .item .alamat p {
+.products .box-container .item .alamat p {
   margin-left: 0.3rem;
   padding-top: 0.3rem;
   color: #333;
 }
 
-.products-container .box-container .item .terjual {
+.products .box-container .item .terjual {
   display: flex;
 }
 
-.products-container .box-container .item .terjual .star-icon {
+.products .box-container .item .terjual .star-icon {
   width: 1rem;
   margin-left: 0.7rem;
 }
 
-.products-container .box-container .item .terjual p {
+.products .box-container .item .terjual p {
   margin-left: 0.3rem;
   padding-top: 0.3rem;
   color: #333;
 }
 
-.products-container .box-container .item h3 {
+.products .box-container .item h3 {
   font-size: 1rem;
   padding: 0.1rem;
   margin-bottom: 0.1rem;
 }
 
-.products-container .box-container .item h2 {
+.products .box-container .item h2 {
   font-size: 1rem;
   font-weight: normal;
   padding-bottom: 0.1rem;
 }
 
-.products-container .box-container .item .star-icon {
+.products .box-container .item .star-icon {
   fill: yellow;
   stroke: #000;
   width: 1rem;
 }
 
-.products-container .box-container .item .buy {
+.products .box-container .item .buy {
   background-color: #6c6c6c;
   padding: 0.5rem;
   color: #fff;
@@ -265,28 +280,154 @@ header .icons-header a:hover {
   margin: 0.3rem 0.3rem;
   text-align: center;
   padding: 0.7rem;
-} 
+}
 
-.products-container .box-container .item:hover{
+.products .box-container .item:hover {
   box-shadow: 0.3rem 0.3rem 0.3rem rgb(107, 107, 107);
   transform: scale(0.9);
   display: block;
 }
 
-.products-container .box-container .item .buy {
+.products .box-container .item .buy {
   display: none;
 }
 
-.products-container .box-container .item:hover .buy{
+.products .box-container .item:hover .buy {
   display: block;
 }
 
+.review h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  padding: 0.5rem;
+  margin-top: 0.1rem;
+  margin-bottom: 3rem;
+  background-color: rgb(181, 181, 181);
+}
+
+.review .box-review {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+
+.review .box-review .box {
+  width: 20rem;
+  height: 20rem;
+  border: 0.1rem solid #000;
+  position: relative;
+  box-shadow: 0.5rem 0.5rem 0.5rem #7e7e7e;
+  background-color: #efefef;
+}
+
+.review .box-review .box .starss {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.review .box-review .box .stars {
+  fill: yellow;
+  width: 1.7rem;
+  left: 0.9rem;
+}
+
+.review .box-review .box p {
+  margin-bottom: 0.7rem;
+  height: 10rem;
+  padding: 1.7rem;
+  line-height: 2rem;
+  font-size: 1.1rem;
+}
+
+.review .box-review .box .user {
+  display: flex;
+}
+
+.review .box-review .box .user img {
+  margin: 0 1rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 0.1rem solid #333;
+  flex: 1;
+}
+
+.review .box-review .box .user .user-info {
+  padding-top: 1rem;
+  font-size: 1rem;
+  flex: 3;
+}
+
+.review .box-review .box .user .user-info h4 {
+  font-weight: normal;
+  margin-top: 0.5rem;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  padding: 0.5rem;
+  margin-top: 0.1rem;
+  margin-bottom: 3rem;
+  background-color: rgb(181, 181, 181);
+}
+
+.contact form {
+  width: 40rem;
+  height: 25rem;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: #ababab;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem rgb(107, 107, 107);
+}
+
+.contact form .colom {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.contact form .colom label {
+  flex: 1;
+  font-size: 1rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.contact form .colom input {
+  flex: 3;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 0.1rem solid #333;
+}
+
+.contact form .colom textarea {
+  flex: 3;
+  border: 0.1rem solid #333;
+  height: 7rem;
+}
+
+.contact form button {
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: #dbdbdb;
+}
+
+.contact form button:hover {
+  background-color: #878787;
+  color: #fff;
+}
 
 /* Media Queries */
 
 /* Laptop and Dekstop */
 @media (max-width: 991px) {
-
   html {
     font-size: 55%;
   }
@@ -296,9 +437,11 @@ header .icons-header a:hover {
   }
 }
 
-
 /* Tablets */
 @media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
 
   header .navbar-header {
     position: absolute;
@@ -311,13 +454,22 @@ header .icons-header a:hover {
   }
 
   .home .content-home {
-    margin-left: 40rem;
+    position: absolute;
+    top: 15rem;
+    margin-left: 5rem;
     font-size: 1rem;
   }
 
-  .products-container .box-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+  .about h3 {
+    margin-top: 3rem;
+  }
+
+  .about p {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #333;
+    line-height: 2rem;
+    padding: 2rem 7rem;
   }
 
   .products-container .box-container .item img {
@@ -329,30 +481,10 @@ header .icons-header a:hover {
   }
 }
 
-
 /* Handphones */
 @media (max-width: 450px) {
-
-  html {
+  html { 
     font-size: 50%;
-  }
-
-  .home .content-home {
-    margin-left: 20rem;
-    font-size: 0.7rem;
-  }
-
-  .about p {
-    text-align: center;
-    font-size: 1.3rem;
-    color: #333;
-    line-height: 2rem;
-    padding: 1rem;
-  }
-
-  .products-container .box-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
   }
 
   .products-container .box-container .item img {
