@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keranjang Belanja</title>
+
+    <!-- Custom css file link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar Starts -->
+    <header>
+      <a href="#" class="logo-header">multi<span style="color: #717171">store</span>.</a>
+      <nav class="navbar-header">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#review">Review</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="icons-header">
+        <a href="#"><i data-feather="search"></i></a>
+        <a href="#"><i data-feather="shopping-cart"></i></a>
+      </div>
+    </header>
+    <!-- Navbar Ends -->
+
+    <!-- Shopping-Cart Starts -->
+    <div class="shopping-cart">
+      <div class="cart-items">
+        <h2>Multi<span style="color: #717171;">store</span> | Keranjang Belanja</h2>
+
+        <input type="checkbox" class="check1" />
+        <div class="item">
+          <p>Produk</p>
+          <p>Item</p>
+          <p>Kuantitas</p>
+          <p>Total Harga</p>
+          <p>Aksi</p>
+        </div>
+
+        <div class="item">
+          <div class="check">
+            <input type="checkbox" />
+          </div> 
+          <img src="products/1.png" alt="pic1" />
+          <p>Item 1</p>
+          <div class="penghitung">
+            <button onclick="decrement()">-</button>
+            <span id="value">0</span>
+            <button onclick="increment()">+</button>
+          </div>
+          <span>Rp69.000</span>
+          <button class="hapus">Hapus</button>
+        </div>
+
+        <div class="item">
+          <div class="check">
+            <input type="checkbox" />
+          </div>
+          <img src="products/2.png" alt="pic1" />
+          <p>Item 2</p>
+          <div class="penghitung">
+            <button onclick="decrement()">-</button>
+            <span id="value">0</span>
+            <button onclick="increment()">+</button>
+          </div>
+          <span>Rp13.000</span>
+          <button class="hapus">Hapus</button>
+        </div>
+
+        <div class="item">
+          <div class="check">
+            <input type="checkbox" />
+          </div>
+          <img src="products/3.png" alt="pic1" />
+          <p>Item 3</p>
+          <div class="penghitung">
+            <button onclick="decrement()">-</button>
+            <span id="value">0</span>
+            <button onclick="increment()">+</button>
+          </div>
+          <span>R112.000</span>
+          <button class="hapus">Hapus</button>
+        </div>
+      </div>
+
+      <div class="total-price">
+        <h2>Total Harga</h2>
+        <p>Harga keseluruhan dari item yang ada di keranjang belanja anda</p>
+
+        <div class="total-akhir">
+            <p class="p1">Subtotal</p>
+            <p>Rp253.400</p>
+        </div>
+
+        <div class="total-akhir">
+            <p class="p1">Biaya Pengiriman</p>
+            <p>13.000</p>
+        </div>
+
+        <div class="total-akhir">
+            <p class="p1">Diskon</p>
+            <p>-Rp13.000</p>
+        </div>
+
+        <div class="total-akhir">
+            <p class="p1">Catatan</p>
+            <p>Tas Astronot warna blue</p>
+        </div>
+
+        <div class="total-akhir">
+            <p class="p1">Total Akhir</p>
+            <p>Rp253.400</p>
+        </div>
+
+        <button>Checkout</button>
+
+      </div>
+    </div>
+    <!-- Shopping-Cart Ends -->
+
+    <script>
+      let penghitung = 0;
+      //fungsi untuk mengurangi nilai
+      function decrement() {
+        if (penghitung > 0) {
+          //mencegah bila nilai negatif
+          penghitung--;
+          document.getElementById("value").innerHTML = penghitung;
+        }
+      }
+      // fungsi untuk menambah nilai
+      function increment() {
+        penghitung++;
+        document.getElementById("value").innerHTML = penghitung;
+      }
+    </script>
+  </body>
+</html>
