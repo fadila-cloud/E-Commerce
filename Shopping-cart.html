@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keranjang Belanja</title>
 
-    <!-- Custom css file link -->
+    <!-- Tautan ke Css -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Tautan ke javasript -->
+    <script src="script.js"></script>
   </head>
 
   <body>
@@ -30,9 +33,9 @@
     <!-- Shopping-Cart Starts -->
     <div class="shopping-cart">
       <div class="cart-items">
-        <h2>Multi<span style="color: #717171;">store</span> | Keranjang Belanja</h2>
-
+        <h2>Multi<span style="color: #717171">store</span> | Keranjang Belanja</h2>
         <input type="checkbox" class="check1" />
+
         <div class="item">
           <p>Produk</p>
           <p>Item</p>
@@ -44,7 +47,7 @@
         <div class="item">
           <div class="check">
             <input type="checkbox" />
-          </div> 
+          </div>
           <img src="products/1.png" alt="pic1" />
           <p>Item 1</p>
           <div class="penghitung">
@@ -90,53 +93,34 @@
       <div class="total-price">
         <h2>Total Harga</h2>
         <p>Harga keseluruhan dari item yang ada di keranjang belanja anda</p>
-
         <div class="total-akhir">
-            <p class="p1">Subtotal</p>
-            <p>Rp253.400</p>
+          <p class="p1">Subtotal</p>
+          <p>Rp253.400</p>
         </div>
-
         <div class="total-akhir">
-            <p class="p1">Biaya Pengiriman</p>
-            <p>13.000</p>
+          <p class="p1">Biaya Pengiriman</p>
+          <p>13.000</p>
         </div>
-
         <div class="total-akhir">
-            <p class="p1">Diskon</p>
-            <p>-Rp13.000</p>
+          <p class="p1">Diskon</p>
+          <p>-Rp13.000</p>
         </div>
-
         <div class="total-akhir">
-            <p class="p1">Catatan</p>
-            <p>Tas Astronot warna blue</p>
+          <p class="p1">Catatan</p>
+          <p>Tas Astronot warna blue</p>
         </div>
-
         <div class="total-akhir">
-            <p class="p1">Total Akhir</p>
-            <p>Rp253.400</p>
+          <p class="p1">Total Akhir</p>
+          <p>Rp253.400</p>
         </div>
-
         <button>Checkout</button>
-
       </div>
     </div>
     <!-- Shopping-Cart Ends -->
 
+    <!-- Feather Icons -->
     <script>
-      let penghitung = 0;
-      //fungsi untuk mengurangi nilai
-      function decrement() {
-        if (penghitung > 0) {
-          //mencegah bila nilai negatif
-          penghitung--;
-          document.getElementById("value").innerHTML = penghitung;
-        }
-      }
-      // fungsi untuk menambah nilai
-      function increment() {
-        penghitung++;
-        document.getElementById("value").innerHTML = penghitung;
-      }
+      feather.replace();
     </script>
   </body>
 </html>
