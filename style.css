@@ -47,6 +47,10 @@ header .icons-header a {
   color: #666;
 }
 
+header .icons-header span {
+  color: red;
+}
+
 header .icons-header a:hover {
   color: #000;
   border-bottom: 0.1rem solid #000;
@@ -201,20 +205,8 @@ header .icons-header a:hover {
   color: #fff;
 }
 
-.products .box-container .item .troli:hover .troli-icon{
-  background-color: #555;
-  color: #fff;
-}
-
-.products .box-container .item .troli .troli-icon {
-  width: 1.7rem;
-  height: 1.7rem;
-  padding-top: 0.5rem;
-  color: #555;
-}
-
 .products .box-container .item .troli .troli-cart {
-  padding-bottom: 0.7rem;
+  padding: 0.3rem 0;
   margin-left: 0.1rem;
   color: #555;
   font-size: 1rem;

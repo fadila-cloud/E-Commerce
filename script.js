@@ -14,12 +14,19 @@ function increment() {
   document.getElementById("value").innerHTML = penghitung;
 }
 
+
+
+
 // fungsi E-Commerce
-function myCart() {
-  let cartt = document.querySelectorAll("#troli-cart");
+let count = 0;
+function myCart(button) {
+  // saya gunakan this supaya langsung menuju ke button
   alert("Pesanan berhasil ditambahkan");
-  document.getElementById("troli-cart").innerHTML = "Ditambahkan ke keranjang";
-  cartt.style.color = "red";
+  button.innerHTML = "Ditambahkan ke keranjang";
+  button.style.color = "red";
+  // bagian angka di keranjang ketika pesanan ditambahkan
+  count++;
+  document.getElementById("jumlah-cart").innerHTML = count;
 }
 
 function buy() {
