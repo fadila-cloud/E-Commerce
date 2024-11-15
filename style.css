@@ -42,11 +42,6 @@ header .navbar-header a:hover {
   padding-bottom: 0.7rem;
 }
 
-header .icons-header a {
-  font-size: 1rem;
-  color: #666;
-}
-
 header .icons-header span {
   color: red;
 }
@@ -200,17 +195,17 @@ header .icons-header a:hover {
   background-color: #555;
 }
 
-.products .box-container .item .troli:hover .troli-cart{
-  background-color: #555;
-  color: #fff;
-}
-
 .products .box-container .item .troli .troli-cart {
-  padding: 0.3rem 0;
-  margin-left: 0.1rem;
+  padding: 0.5rem 0;
+  width: 100%;
   color: #555;
   font-size: 1rem;
   background-color: rgb(223, 223, 223);
+}
+
+.products .box-container .item .troli:hover .troli-cart {
+  background-color: #555;
+  color: #fff;
 }
 
 .products .box-container .item:hover .troli {
@@ -493,7 +488,6 @@ header .icons-header a:hover {
   width: 30rem;
   background-color: #f7f7f7;
   flex: 3;
-  position: relative;
 }
 
 .shopping-cart .cart-items h2,
@@ -504,10 +498,11 @@ header .icons-header a:hover {
   padding-left: 1rem;
 }
 
-.shopping-cart .cart-items .check1 {
-  position: absolute;
-  left: 2.5rem;
-  top: 8.5rem;
+.shopping-cart .cart-items .empty {
+  text-align: center;
+  justify-content: center;
+  font-size: 3rem;
+  padding: 10rem;
 }
 
 .shopping-cart .cart-items .item {
@@ -575,12 +570,19 @@ header .icons-header a:hover {
   font-weight: normal;
 }
 
-.shopping-cart .total-price .total-akhir {
+.shopping-cart .total-price .total-akhir1 {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0.3rem;
+  border-top: 0.1rem solid #333;
+}
+
+/* .shopping-cart .total-price .total-akhir {
   display: flex;
   justify-content: space-between;
   margin: 0 0.3rem;
   border-bottom: 0.1rem solid #333;
-}
+} */
 
 .shopping-cart .total-price .total-akhir .p1 {
   color: #333;
@@ -592,7 +594,7 @@ header .icons-header a:hover {
   padding: 1rem;
   font-size: 1rem;
   margin-top: 1rem;
-  margin-left: 7rem;
+  margin-left: 1rem; 
   color: #fff;
   background-color: #333;
 }

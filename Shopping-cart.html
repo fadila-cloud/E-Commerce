@@ -11,17 +11,16 @@
     <!-- Tautan ke javasript -->
     <script src="script.js"></script>
   </head>
-
   <body>
     <!-- Navbar Starts -->
     <header>
       <a href="#" class="logo-header">multi<span style="color: #717171">store</span>.</a>
       <nav class="navbar-header">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#review">Review</a>
-        <a href="#contact">Contact</a>
+        <a href="E-Commerce.html#">Home</a>
+        <a href="E-Commerce.html#about">About</a>
+        <a href="E-Commerce.html#products">Products</a>
+        <a href="E-Commerce.html#review">Review</a>
+        <a href="E-Commerce.html#contact">Contact</a>
       </nav>
       <div class="icons-header">
         <a href="#"><i data-feather="search"></i></a>
@@ -31,19 +30,17 @@
     <!-- Navbar Ends -->
 
     <!-- Shopping-Cart Starts -->
-    <div class="shopping-cart">
+    <div class="shopping-cart" id="shopping-cart">
       <div class="cart-items">
         <h2>Multi<span style="color: #717171">store</span> | Keranjang Belanja</h2>
-        <input type="checkbox" class="check1" />
-
-        <div class="item">
+        <p class="empty">Keranjang Kosong</p>
+        <!-- <div class="item"> 
           <p>Produk</p>
           <p>Item</p>
           <p>Kuantitas</p>
           <p>Total Harga</p>
           <p>Aksi</p>
         </div>
-
         <div class="item">
           <div class="check">
             <input type="checkbox" />
@@ -63,7 +60,7 @@
           <div class="check">
             <input type="checkbox" />
           </div>
-          <img src="products/2.png" alt="pic1" />
+          <img src="products/2.png" alt="pic2" />
           <p>Item 2</p>
           <div class="penghitung">
             <button onclick="decrement()">-</button>
@@ -78,7 +75,7 @@
           <div class="check">
             <input type="checkbox" />
           </div>
-          <img src="products/3.png" alt="pic1" />
+          <img src="products/3.png" alt="pic3" />
           <p>Item 3</p>
           <div class="penghitung">
             <button onclick="decrement()">-</button>
@@ -88,11 +85,30 @@
           <span>R112.000</span>
           <button class="hapus">Hapus</button>
         </div>
+
+        <div class="item">
+          <div class="check">
+            <input type="checkbox" />
+          </div>
+          <img src="products/4.png" alt="pic4" />
+          <p>Item 4</p>
+          <div class="penghitung">
+            <button onclick="decrement()">-</button>
+            <span id="value">0</span>
+            <button onclick="increment()">+</button>
+          </div>
+          <span>R36.780</span>
+          <button class="hapus">Hapus</button>
+        </div> -->
       </div>
 
       <div class="total-price">
         <h2>Total Harga</h2>
-        <p>Harga keseluruhan dari item yang ada di keranjang belanja anda</p>
+        <div class="total-akhir1">
+          <p class="p1">Total Akhir</p>
+          <p>0</p>
+        </div>
+        <!-- <p>Harga keseluruhan dari item yang ada di keranjang belanja anda</p>
         <div class="total-akhir">
           <p class="p1">Subtotal</p>
           <p>Rp253.400</p>
@@ -114,6 +130,7 @@
           <p>Rp253.400</p>
         </div>
         <button>Checkout</button>
+        <button>Reset</button> -->
       </div>
     </div>
     <!-- Shopping-Cart Ends -->
