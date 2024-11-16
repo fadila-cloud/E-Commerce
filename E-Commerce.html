@@ -7,29 +7,32 @@
 
     <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script> -->
 
-    <!-- Tautan ke Css -->
+    <!-- Tautan Css -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Tautan ke javasript -->
+    <!-- Tautan javasript -->
     <script src="script.js"></script>
+
+    <!-- Alpine javascript -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <!-- Navbar Starts -->
-    <header>
+    <header x-data>
       <a href="#" class="logo-header">multi<span style="color: #717171">store</span>.</a>
       <nav class="navbar-header">
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#review">Review</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">Tentang kami</a>
+        <a href="#products">Produk</a>
+        <a href="#review">Ulasan</a>
+        <a href="#contact">Kontak</a>
       </nav>
       <div class="icons-header">
-        <a href="Shopping-cart.html">
-          <i data-feather="shopping-cart"></i>
-          <span id="jumlah-cart">0</span>
-        </a>
+        <!-- tombol keranjang -->
+        <i data-feather="shopping-cart" class="cart-icon"></i>
+        <span id="jumlah-cart" x-text="$store.cart.quantity"></span>
       </div>
     </header>
     <!-- Navbar Ends -->
@@ -40,504 +43,70 @@
         <h3>multi<span>store</span>.</h3>
         <p>MultiStore adalah toko online terpercaya dengan produk berkualitas</p>
         <p>dan harga terbaik untuk pengalaman belanja yang aman.</p>
-        <a href="#products" class="btn-home">shop now</a>
+        <a href="#products" class="btn-home">Belanja Sekarang</a>
       </div>
     </section>
     <!-- Home Section Ends -->
 
+    <!-- Shopping-cart Starts -->
+    <div class="shopping-cart" x-data="store">
+      <div class="cart-item">
+        <img :src="`products/${item.img}`" :alt="item.name" />
+        <div class="detail">
+          <h3>Product 1</h3>
+          <span x-text="`Rp${item.price.toLocaleString()}`"></span> &times; <!-- css entities / simbol untuk kali --> 
+          <button id="remove">&minus;</button>
+          <span>30000</span>
+          <button id="add">&plus;</button> &equals; <!-- css entities / simbol untk sama dengan -->
+          <span>30000</span>
+        </div>
+      </div>
+    </div>
+    <!-- Shopping-cart Ends -->
+
     <!-- About Section Starts -->
     <section class="about" id="about">
-      <h1>About<span>Us</span></h1>
-      <h3>Why Choose Us?</h3>
+      <h1>Tentang<span>Kami</span></h1>
+      <h3>Kenapa pilih kami?</h3>
       <p>Di<span>Multistore</span> ,kami berkomitmen untuk menjadi toko online terpercaya bagi anda. Kami menawarkan produk berkualitas dengan harga terbaik untuk memberikan pengalaman belanja yang aman dan nyaman. Kepercayaan dan kepuasan pelanggan adalah prioritas kami, sehingga anda dapat berbelanja dengan tenang dan mendapatkan nilai terbaik di setiap transaksi.</p>
     </section>
     <!-- About Section Ends -->
 
     <!-- Menu Products Starts -->
-    <section class="products" id="products">
-      <h1>Products</h1>
+    <section class="products" id="products" x-data="products">   <!-- Data alpine-->
+      <h1>Produk Kami</h1>
       <div class="box-container" id="box-container">
-        <div class="item">
+        <!-- data produk dgn alpine -->
+        <!-- elemen template digunakan untuk mendefinisikan element berulang -->
+        <template x-for="(item, index) in items" x-key="index">
+        <div class="item" id="item">
           <p class="discount">-17%</p>
-          <img src="products/1.png" alt="product1" />
+          <img :src="`products/${item.img}`" :alt="item.name" />
           <div class="troli">
             <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
           </div>
-          <h3>Headphone - <span>Headphone Bluetooth</span></h3>
-          <p class="harga">Rp178.890</p>
+          <h3 x-text="item.name"></h3>
+          <!-- x-text menampilkan data properti spt item.name, item.price-->
+          <!-- toLocalString harga diformat dgn memiliki angka ribuan, yg tadinya bukan string -->
+          <p class="harga"><span x-text="`Rp${item.price.toLocaleString()}`"></span></p> 
           <div class="alamat">
             <i data-feather="home" class="home-icon"></i>
-            <p>Lampung</p>
+            <p x-text="item.location"></p>
           </div>
           <div class="terjual">
             <i data-feather="star" class="star-icon"></i>
-            <p>4.5 | 4rb+ terjual</p>
+            <p x-text="item.star"></p>
           </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-11%</p>
-          <img src="products/2.png" alt="product2" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Tas Slempang - <span>Tas Slempang Wanita</span></h3>
-          <p class="harga">Rp59.999</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Bandung</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.7 | 80+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-10%</p>
-          <img src="products/3.png" alt="product3" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Handphone - <span>Realmi C52 Ram 4GB/128GB</span></h3>
-          <p class="harga">Rp1.897.500</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Jakarta Pusat</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.8 | 3rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-5%</p>
-          <img src="products/4.png" alt="product4" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Tisu Passeo - <span>Tisu Passeo Isi 6 pcs (1 Dus)</span></h3>
-          <p class="harga">Rp36.780</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Yogyakarta</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.8 | 1rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-14%</p>
-          <img src="products/5.png" alt="product5" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Mouse PC - <span>Mouse Wireless Gaming</span></h3>
-          <p class="harga">Rp165.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Blora</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.9 | 10rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-10%</p>
-          <img src="products/6.png" alt="product6" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Sari Roti - <span>Sari Roti Tawar Jumbo Original</span></h3>
-          <p class="harga">Rp17.450</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Banyuwangi</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.9 | 3rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-7%</p>
-          <img src="products/7.png" alt="product7" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Indomie - <span>Indomie Goreng 1 Dus 85grx40 pcs</span></h3>
-          <p class="harga">Rp90.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Nusa Tenggara Barat</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.5 | 799 terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-7%</p>
-          <img src="products/8.png" alt="product8" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Sepatu Wanita - <span>Sepatu Sneakers Wanita Kasual Sport</span></h3>
-          <p class="harga">Rp205.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Bali</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.7 | 5rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-18%</p>
-          <img src="products/9.png" alt="product9" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Rak Sepatu - <span>Rak Sepatu 4 Susun Anti-Karat</span></h3>
-          <p class="harga">Rp57.990</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Sidoarjo</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.7 | 2rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-23%</p>
-          <img src="products/10.png" alt="product10" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Gitar - <span>Gitar Akustik | Gitar Jumbo Murah</span></h3>
-          <p class="harga">Rp150.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Tangerang</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.9 | 567+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-10%</p>
-          <img src="products/11.png" alt="product11" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>OMG - <span>OMG Oh My Glam Coverlast Two Way Cake</span></h3>
-          <p class="harga">Rp37.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Kediri</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.4 | 273+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-25%</p>
-          <img src="products/12.png" alt="product12" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Jas Hujan - <span>Jas Hujan Pria Wanita Tebal Kuat Elastis</span></h3>
-          <p class="harga">Rp271.999</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Pagar Alam</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.8 | 7rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-11%</p>
-          <img src="products/13.png" alt="product13" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Teh Sariwangi - <span>Sariwangi Teh Celup</span></h3>
-          <p class="harga">Rp7.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Pontianak</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.3 | 135+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-15%</p>
-          <img src="products/14.png" alt="product14" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Kaos Pria - <span>Kemeja Pria Lengan Pendek Katun</span></h3>
-          <p class="harga">Rp69.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Makassar</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.9 | 6rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-8%</p>
-          <img src="products/15.png" alt="product15" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Sarung tangan jalan - <span>Sarung Tangan Wanita Rajut</span></h3>
-          <p class="harga">Rp15.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Semarang</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>5.0 | 10rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-21%</p>
-          <img src="products/16.png" alt="product16" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Hoodie - <span>Sweater Hoodie Jaket Polos All Size</span></h3>
-          <p class="harga">Rp158.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Probolinggo</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.8 | 10rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-7%</p>
-          <img src="products/17.png" alt="product17" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Mangkuk Mahoni - <span>Mangkuk Bakso Mahoni 15cm</span></h3>
-          <p class="harga">Rp13.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Tuban</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.8 | 10rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-18%</p>
-          <img src="products/18.png" alt="product18" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Parfum Sauvage - <span>Parfum Dior Sauvage 100ml</span></h3>
-          <p class="harga">Rp47.670</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Palangkaraya</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.7 | 8rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-23%</p>
-          <img src="products/19.png" alt="product19" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Make Up - <span>Paket Make Up Kecantikan Muka</span></h3>
-          <p class="harga">Rp112.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Banten</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.5 | 2rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-33%</p>
-          <img src="products/20.png" alt="product20" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Cat Bag - <span>Tas Astronot Kucing Original</span></h3>
-          <p class="harga">Rp178.890</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Jember</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.9 | 11rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-5%</p>
-          <img src="products/21.png" alt="product21" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Excel Snack Kucing - <span>Makanan Kucing Kering Excel Tuna</span></h3>
-          <p class="harga">Rp45.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Surabaya</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>5.0 | 4rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-19%</p>
-          <img src="products/22.png" alt="product22" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Kaos Remaja Sablon - <span>Kaos Pria Lengan Pendek</span></h3>
-          <p class="harga">Rp69.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Bekasi</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.9 | 3rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-33%</p>
-          <img src="products/23.png" alt="product23" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Helm - <span>Helm Honda Original standar Vario</span></h3>
-          <p class="harga">Rp135.000</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Pekalongan</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.9 | 9rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-14%</p>
-          <img src="products/24.png" alt="product24" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Masker Earlop - <span>Masker Earlop Isi 50 PCS</span></h3>
-          <p class="harga">Rp17.700</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Samarinda</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.9 | 1rb+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
-        </div>
-
-        <div class="item">
-          <p class="discount">-13%</p>
-          <img src="products/25.png" alt="product25" />
-          <div class="troli">
-            <button onclick="myCart(this)" class="troli-cart">Tambahkan ke keranjang</button>
-          </div>
-          <h3>Spatula - <span>Spatula Kitchen Set 5in Peralatan Dapur</span></h3>
-          <p class="harga">Rp18.980</p>
-          <div class="alamat">
-            <i data-feather="home" class="home-icon"></i>
-            <p>Jambi</p>
-          </div>
-          <div class="terjual">
-            <i data-feather="star" class="star-icon"></i>
-            <p>4.9 | 789+ terjual</p>
-          </div>
-          <button class="buy" onclick="buy()">Buy Now</button>
+          <button class="buy" onclick="buy()">Buy now</button>
         </div>
       </div>
+    </template>
     </section>
     <!-- Menu Products Ends -->
 
     <!-- Review Starts -->
     <section class="review" id="review">
-      <h1>Customer's Review</h1>
+      <h1>Ulasan Customer</h1>
       <div class="box-review">
         <div class="box">
           <div class="starss">
@@ -599,7 +168,7 @@
     <!-- Contact Starts -->
     <section class="contact" id="contact">
       <div class="box-container">
-        <h1>Contact Us</h1>
+        <h1>Kontak</h1>
         <input type="text" class="colom" placeholder="Name" autocomplete="off" />
         <input type="email" class="colom" placeholder="E-mail" autocomplete="off" />
         <input type="text" class="colom" placeholder="Message" />
