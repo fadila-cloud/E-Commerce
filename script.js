@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   feather.replace(); // Inisialisasi Feather Icons
 
   // ambil elemen shopping-cart dan cart-icon
-  let shoppingCart = document.querySelector(".shopping-cart");
-  let cartIcon = document.querySelector(".cart-icon");
+  const shoppingCart = document.querySelector(".shopping-cart");
+  const cartIcon = document.querySelector(".cart-icon");
 
   // ketika tombol keranjang di klik
   if (cartIcon && shoppingCart) {
@@ -54,8 +54,9 @@ document.addEventListener("alpine:init", () => {
     total: 0,
     quantity: 0,
     add(newItem) {
+      // menambah jumlah item
       // mengecek jika ada barang yg sama di cart
-      let cartItem = this.items.find((item) => item.id === newItem.id);
+      const cartItem = this.items.find((item) => item.id === newItem.id);
 
       // jika belum ada barangnya
       if (!cartItem) {
@@ -80,8 +81,9 @@ document.addEventListener("alpine:init", () => {
       }
     },
     less(id) {
+      // mengurangi jumlah item
       // yg mau di remove berdasarkan item
-      let cartItem = this.items.find((item) => item.id === id);
+      const cartItem = this.items.find((item) => item.id === id);
       // jika item lebih dari 1
       if (cartItem.quantity > 1) {
         this.items = this.items.map((item) => {
@@ -98,6 +100,19 @@ document.addEventListener("alpine:init", () => {
         });
       }
     },
+    reset() {
+      // mereset semua item
+      this.items = []; // mengosongkan item
+      this.total = 0; // mereset total belanja
+      this.quantity = 0; // mereset jumlah item
+    },
+    remove(itemtoRemove) {
+      // mengahapus setiap item, saya beri nama itemtoRemove
+      this.items = this.items.filter((item) => item.id !== itemtoRemove.id); // metode filter hanya untuk elemen tertentu
+      // memperbarui total dan jumlah barang setelah penghapusan\
+      this.total -= itemtoRemove.price * itemtoRemove.quantity;
+      this.quantity -= itemtoRemove.quantity;
+    },
   });
 });
 
@@ -105,21 +120,6 @@ document.addEventListener("alpine:init", () => {
 function myCart(button) {
   alert("Pesanan berhasil ditambahkan");
   button.innerHTML = "Ditambahkan ke keranjang";
-  button.style.color = "red";
-  button.style.backgroundColor = "rgb(232, 232, 232)";
-}
-
-// belanja sekarang
-let count = 0;
-function buy() {
-  // menampilkan dialog konfirmasi yes or no
-  let userConfirmed = confirm("Apakah ingin beralih ke orderan?");
-  if (userConfirmed) {
-    // menampilkan kelas shopping-cart
-    let cart1 = document.querySelector(".shopping-cart");
-    cart1.style.display = "block";
-    alert("Selamat datang di pesanan anda");
-  } else {
-    alert("Anda tetap di sini");
-  }
+  button.style.color = "red"; // mengubah teks menjadi merah
+  button.style.backgroundColor = "rgb(248, 248, 248)";
 }

@@ -107,16 +107,16 @@ header .icons-header .cart-icon:hover {
 .home .btn-home {
   display: inline-block;
   border-radius: 3rem;
-  background-color: rgb(112, 112, 112);
-  color: #fff;
+  background-color: rgb(146, 146, 146);
+  color: #333;
   padding: 0.7rem 0.7rem;
   font-size: 1rem;
   margin-top: 1rem;
 }
 
 .home .btn-home:hover {
-  background-color: rgb(167, 167, 167);
-  color: #000;
+  background-color: rgb(88, 88, 88);
+  color: #fff;
 }
 
 /* keranjang belanja */
@@ -176,7 +176,7 @@ header .icons-header .cart-icon:hover {
 }
 
 .shopping-cart .cart-item .detail #add,
-.cart-item .detail #remove {
+.detail #less {
   display: inline-block;
   padding: 0.1rem 0.2rem;
   margin: 0.1rem;
@@ -188,12 +188,23 @@ header .icons-header .cart-icon:hover {
   border: 0.1rem solid #333;
 }
 
+.shopping-cart .cart-item .detail #add:hover, 
+.detail #less:hover  {
+  background-color: #333;
+  color: #fff;
+}
+
 .shopping-cart .cart-item .detail .remove {
   color: #fff;
   font-size: 0.8rem;
-  border: 0.1rem solid rgb(255, 25, 25);
-  background-color: rgb(255, 25, 25);
+  border: 0.1rem solid rgb(255, 71, 71);
+  background-color: rgb(255, 71, 71);
   padding: 0.1rem;
+}
+
+.shopping-cart .cart-item .detail .remove:hover {
+  background-color: red;
+  border: 0.1rem solid red;
 }
 
 /* Checkout Form */
@@ -217,22 +228,31 @@ header .icons-header .cart-icon:hover {
 
 .shopping-cart .form-container span {
   flex: 1;
+  font-size: 0.8rem;
 }
 
 .shopping-cart .form-container input {
   flex: 2;
   background-color: #f4f4f4;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+}
+
+.shopping-cart .form-container input:hover {
+  background-color: #d2d2d2;
 }
 
 .shopping-cart .form-container .btn-checkout {
-  padding: 0.5rem 0.2rem;
-  background-color: #555;
+  padding: 0.4rem;
+  background-color: rgb(255, 71, 71);
   color: #fff;
-  border-radius: 10%;
+  border-radius: 5%;
   cursor: pointer;
   margin: 0.1rem auto;
   font-size: 0.9rem;
+}
+
+.shopping-cart .form-container .btn-checkout:hover {
+  background-color: red;
 }
 
 /* about */
@@ -299,7 +319,7 @@ header .icons-header .cart-icon:hover {
   text-align: center;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  background-color: rgb(232, 232, 232);
+  background-color: rgb(248, 248, 248);
   box-shadow: 0.3rem 0.3rem 0.3rem #333;
 }
 
@@ -325,7 +345,7 @@ header .icons-header .cart-icon:hover {
 }
 
 .products .box-container .item .troli {
-  background-color: rgb(223, 223, 223);
+  background-color: rgb(248, 248, 248);
 }
 
 .products .box-container .item .troli:hover {
@@ -337,11 +357,11 @@ header .icons-header .cart-icon:hover {
   width: 100%;
   color: #555;
   font-size: 1rem;
-  background-color: rgb(223, 223, 223);
+  background-color: rgb(248, 248, 248);
 }
 
 .products .box-container .item .troli:hover .troli-cart {
-  background-color: #555;
+  background-color: #777;
   color: #fff;
 }
 
@@ -415,27 +435,10 @@ header .icons-header .cart-icon:hover {
   width: 1rem;
 }
 
-.products .box-container .item .buy {
-  background-color: #6c6c6c;
-  padding: 0.5rem;
-  color: #fff;
-  border-radius: 0.7rem;
-  margin: 0.3rem 0.3rem;
-  text-align: center;
-  padding: 0.7rem;
-  display: none;
-  font-size: 1rem;
-}
-
 .products .box-container .item:hover {
   box-shadow: 0.3rem 0.3rem 0.3rem rgb(107, 107, 107);
   transform: scale(0.9);
   display: block;
-}
-
-.products .box-container .item:hover .buy {
-  display: block;
-  background-color: #555;
 }
 
 /* ulasan customer */
@@ -592,6 +595,7 @@ header .icons-header .cart-icon:hover {
   color: #4f4f4f;
   display: block;
   padding: 0.7rem;
+  font-size: 1rem;
 }
 
 .footer .box-container .box-footer a:hover {
@@ -602,7 +606,7 @@ header .icons-header .cart-icon:hover {
   text-align: center;
   margin-top: 1rem;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #333;
 }
 
