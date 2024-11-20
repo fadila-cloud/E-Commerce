@@ -1,5 +1,6 @@
 // keranjang belanja
 document.addEventListener("DOMContentLoaded", () => {
+  // DOMContentLoaded berfungsi menunggu semua hlmn termuat sebelum menjalankan kode ini
   feather.replace(); // Inisialisasi Feather Icons
 
   // ambil elemen shopping-cart dan cart-icon
@@ -80,17 +81,18 @@ document.addEventListener("alpine:init", () => {
         });
       }
     },
+    // form validation
     less(id) {
       // mengurangi jumlah item
-      // yg mau di remove berdasarkan item
       const cartItem = this.items.find((item) => item.id === id);
       // jika item lebih dari 1
-      if (cartItem.quantity > 1) {
+      if (cartItem && cartItem.quantity > 1) {
         this.items = this.items.map((item) => {
           //jika bukan barang yg di klik atau jika id nya tidk sama
           if (item.id !== id) {
             return item;
           } else {
+            // mengurangi quantity dan total
             item.quantity--;
             item.total = item.price * item.quantity;
             this.quantity--;
@@ -98,13 +100,29 @@ document.addEventListener("alpine:init", () => {
             return item;
           }
         });
+      } else {
+        // jika quantity kurang dari 1 atau 0, tampilkan peringatan
+        alert("Jumlah produk tidak boleh kurang dari 1!");
       }
     },
-    reset() {
+    hapussemua() {
       // mereset semua item
       this.items = []; // mengosongkan item
       this.total = 0; // mereset total belanja
       this.quantity = 0; // mereset jumlah item
+    },
+    checkout() {
+      const inputs = document.querySelectorAll("#checkout input, #checkout select"); // mengambi semua input dan select yg ada di kelas checkout
+      // mengubah input menjadi array
+      let formKomplit = Array.from(inputs).every((input) => input.value.trim() !== ""); // mengambi setiap inputan dengan every
+      if (formKomplit) {
+        alert(`Anda harus membayar: Rp${this.total.toLocaleString()}`);
+        alert("Checkout berhasil! Terimakasih sudah berbelanja di toko kami!");
+        // panggil this.hapussemua() untuk mengosongkan cart stelah checkout
+        this.hapussemua();
+      } else {
+        alert("Error! Harap isi semua field sebeum checkout.");
+      }
     },
     remove(itemtoRemove) {
       // mengahapus setiap item, saya beri nama itemtoRemove
@@ -116,10 +134,24 @@ document.addEventListener("alpine:init", () => {
   });
 });
 
+// payment method ketika kartu kredit di klik
+document.addEventListener("DOMContentLoaded", function () {
+  const pilihPembayaran = document.querySelector("#payment");
+  const expiredLabel = document.querySelectorAll(".expired-label");
+
+  pilihPembayaran.addEventListener("change", function () {
+    if (this.value === "Kartu Kredit") {
+      // tampilkan elemen tanggal dan tahun kadaluarsa
+      expiredLabel.forEach((label) => (label.style.display = "block"));
+    } else {
+      // sembunyikan elemen tanggal dan tahun kdaluarsa
+      expiredLabel.forEach((label) => (label.style.display = "none"));
+    }
+  });
+});
+
 //  tambahkan ke keranjang
 function myCart(button) {
   alert("Pesanan berhasil ditambahkan");
   button.innerHTML = "Ditambahkan ke keranjang";
-  button.style.color = "red"; // mengubah teks menjadi merah
-  button.style.backgroundColor = "rgb(248, 248, 248)";
 }
