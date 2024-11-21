@@ -75,20 +75,24 @@
       <div class="form-container" x-show="$store.cart.items.length">
         <form action="" id="checkout">
           <h5>Detail Pembeli</h5>
-          <label for="name">
+          <label for="name" class="tooltip2">
             <span>Nama Lengkap:</span>
+            <span class="tooltiptext2">Tulis nama lengkap anda</span>
             <input type="text" name="name" id="name" placeholder=" your name" />
           </label>
-          <label for="email">
+          <label for="email" class="tooltip2">
             <span>Email:</span>
+            <span class="tooltiptext2">Tulis email anda</span>
             <input type="email" name="email" id="email" placeholder=" your email" />
           </label>
-          <label for="tel">
+          <label for="tel" class="tooltip2">
             <span>No. Telpon:</span>
+            <span class="tooltiptext2">Masukkan nomor telepon</span>
             <input type="tel" name="tel" id="tel" placeholder=" your number" />
           </label>
-          <label for="alamat">
+          <label for="alamat" class="tooltip2">
             <span>Alamat:</span>
+            <span class="tooltiptext2">Tulis alamat desa anda</span>
             <input type="text" name="alamat" id="alamat" placeholder=" your address" autocomplete="off" />
           </label>
           <label for="payment">
@@ -249,9 +253,18 @@
     <section class="contact" id="contact">
       <div class="box-container">
         <h1>Kontak</h1>
-        <input type="text" class="colom" placeholder="Name" autocomplete="off" />
-        <input type="email" class="colom" placeholder="E-mail" autocomplete="off" />
-        <input type="text" class="colom" placeholder="Message" />
+        <div class="tooltip">
+          <span class="tooltiptext">Masukkan nama lengkap anda</span>
+          <input type="text" class="colom" placeholder="Name" />
+        </div>
+        <div class="tooltip">
+          <span class="tooltiptext">Masukkan email anda</span>
+          <input type="email" class="colom" placeholder="E-mail" />
+        </div>
+        <div class="tooltip">
+          <span class="tooltiptext">Tulis sedikit pesan anda</span>
+          <input type="text" class="colom" placeholder="Message" />
+        </div>
         <button type="submit" class="btn-colom">Kirim</button>
       </div>
     </section>
